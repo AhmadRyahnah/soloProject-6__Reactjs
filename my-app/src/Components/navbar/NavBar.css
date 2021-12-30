@@ -1,0 +1,62 @@
+nav .navbarContainer {
+  display: grid;
+  grid-template-areas: "logo nav-list shoppingIcon login_logout";
+  height: 70px;
+}
+
+.logo img {
+  height: 60px;
+}
+.logo {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.navbarContainer .nav-list ul {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbarContainer .nav-list ul li {
+  list-style: none;
+}
+.navbarContainer .nav-list ul li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #2e739e;
+}
+
+.shoppingIcon {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+}
+.login_logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.shoppingIcon span {
+  position: absolute;
+  right: 15px;
+  bottom: 22px;
+}
+.shoppingIcon svg {
+  height: 40px;
+}
+.login_logout button {
+  height: 35px;
+  width: 75px;
+  border: none;
+  background-color: #2e739e;
+  border-radius: 5px;
+}
+
+.login_logout button a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+}
