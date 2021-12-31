@@ -1,0 +1,22 @@
+.register {
+  grid-area: reg;
+  width: 80%;
+ 
+  margin: auto;
+  
+}
+.login {
+  grid-area: login;
+  width: 80%;
+  margin: auto;
+
+}
+
+.signInUp {
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-areas: "reg login";
+  /* grid-gap: 2em; */
+  width: 100%;
+  height: 80vh;
+}

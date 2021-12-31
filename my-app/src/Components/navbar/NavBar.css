@@ -51,7 +51,7 @@ nav .navbarContainer {
   height: 35px;
   width: 75px;
   border: none;
-  background-color: #2e739e;
+  background-color: #166FE5;
   border-radius: 5px;
 }
 
@@ -60,3 +60,10 @@ nav .navbarContainer {
   font-size: 1.2em;
   color: white;
 }
+
+/* .navToggle{
+  width: 100px;
+  height: 55px;
+  background-color: white;
+  border: none;
+} */
