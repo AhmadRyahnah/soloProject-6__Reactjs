@@ -41,8 +41,9 @@ const NavBar = (props) => {
           </ul>
         </div>
         <div className="shoppingIcon">
-          <Link to="/about"><ShoppingIcon /></Link>
-          <span>0</span>
+          <Link to="/Checkout"><ShoppingIcon /></Link>
+          <Link to="/Checkout"><span>0</span></Link>
+          
         </div>
         <div className="login_logout">
           {isLoggedIn ? <button onClick={logout}><Link to="/SignInUp">Log out</Link></button> : <button><Link to="/SignInUp">Log In</Link></button>}

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import './Register.css';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import swal from 'sweetalert';
+
 
 
 
@@ -56,7 +58,13 @@ const Register = () => {
         } else {
             console.log('ahmad');
         }
+        swal({
 
+            title: "You are Register in Successfully ",
+            text: "Welcome!",
+            icon: "success",
+            button: "ok ",
+        });
     }
 
 

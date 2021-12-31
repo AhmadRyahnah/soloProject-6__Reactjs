@@ -1,0 +1,15 @@
+footer {
+  background-color: #166fe5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+@media screen and (max-width:950px){
+    footer {
+        background-color: #166fe5;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        text-align: center;
+      }
+  }

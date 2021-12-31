@@ -39,3 +39,9 @@
   border: none;
   margin-top: 2em;
 }
+
+@media screen and (max-width:950px){
+  .loginContainer{
+    margin: 0 auto;
+  }
+}
