@@ -39,6 +39,7 @@
   border-radius: 10px;
   border: none;
   margin-top: 2em;
+  cursor: pointer;
 }
 @media screen and (max-width:950px){
   .registerContainer{
