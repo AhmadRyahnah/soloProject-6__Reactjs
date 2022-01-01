@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NavBar.css";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -20,33 +20,46 @@ const NavBar = (props) => {
     localStorage.removeItem('User')
     props.handleUseNavigate()
   }
-
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click)
 
 
   return (
     <nav >
       <div className="navbarContainer">
-
-
-        <div className="logo">
+        <div className="logo" onClick={handleClick}>
           <img src='./img/logo.png' alt="logo" />
         </div>
-        <div className="nav-list">
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/Services">Services</Link></li>
-            {isLoggedIn ? <li><Link to="/Profile">Profile</Link></li> : null}
-            <li><Link to="/about">About us</Link></li>
+        <div className={click ? "nav-list active" : "nav-list"}>
+          <ul >
+            <li><Link to="/" onClick={handleClick}>Home</Link></li>
+            <li><Link to="/Services" onClick={handleClick}>Services</Link></li>
+            {isLoggedIn ? <li><Link to="/Profile" onClick={handleClick}>Profile</Link></li> : null}
+            <li><Link to="/about" onClick={handleClick}>About us</Link></li>
 
           </ul>
         </div>
-        <div className="shoppingIcon">
-          <Link to="/Checkout"><ShoppingIcon /></Link>
-          <Link to="/Checkout"><span>0</span></Link>
-          
+        <div className={click ? "shoppingIcon active" : "shoppingIcon"}>
+          <ul >
+            <li>
+              <Link to="/Checkout" onClick={handleClick}><ShoppingIcon /></Link>
+              <Link to="/Checkout" onClick={handleClick} className="shoppingIcon"><span>0</span></Link>
+            </li>
+          </ul>
         </div>
-        <div className="login_logout">
-          {isLoggedIn ? <button onClick={logout}><Link to="/SignInUp">Log out</Link></button> : <button><Link to="/SignInUp">Log In</Link></button>}
+        <div className={click ? "login_logout active" : "login_logout"}>
+          <ul >
+            <li>
+
+              {isLoggedIn ? <button onClick={logout}><Link to="/SignInUp" onClick={handleClick}>Log out</Link></button>
+                :
+                <button><Link to="/SignInUp" onClick={handleClick}>Log In</Link></button>}
+
+            </li>
+          </ul>
+        </div>
+        <div className="nav-icon" onClick={handleClick}>
+          <i className={!click ? 'fas fa-times' : 'fas fa-bars'}></i>
         </div>
 
 
@@ -55,4 +68,4 @@ const NavBar = (props) => {
   );
 }
 
-// export default NavBar;
+

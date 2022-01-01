@@ -5,4 +5,15 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.heroImage .btnOne{
+  position: absolute;
+  bottom: 200px;
+left: 100px;
+}
+.heroImage .btnOne h1{
+  color:white;
 }
