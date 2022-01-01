@@ -20,7 +20,7 @@ const NavBar = (props) => {
     localStorage.removeItem('User')
     props.handleUseNavigate()
   }
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState(true);
   const handleClick = () => setClick(!click)
 
 

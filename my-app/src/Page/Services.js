@@ -6,28 +6,25 @@ const Services = () => {
     return (
         <div className='twoCard'>
 
-            <Link to='/UnknownCash'>
+            <Link to='/Lecture'>
                 <div className='cardOne'>
                     <img src='' alt='' />
                     <h2>US</h2>
                     <h6>ahmad</h6>
                     <h4>ahmad</h4>
-
-
                 </div>
             </Link>
-            <div className='cardTwo'>
-                <div className='cardOne'>
-                    <img src='' alt='' />
-                    <h2>US</h2>
-                    <h6>ahmad</h6>
-                    <h4>ahmad</h4>
-
-
+            <Link to='/Courses'>
+                <div className='cardTwo'>
+                    <div className='cardOne'>
+                        <img src='' alt='' />
+                        <h2>US</h2>
+                        <h6>ahmad</h6>
+                        <h4>ahmad</h4>
+                    </div>
                 </div>
-
-            </div>
-        </div>
+            </Link>
+        </div >
     )
 }
 

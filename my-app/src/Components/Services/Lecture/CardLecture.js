@@ -1,6 +1,6 @@
 import React from 'react'
-import './CardUS.css'
-const CardUS = (props) => {
+import './CardLecture.css'
+const CardLecture = (props) => {
     return (
         <div className='cardContainer'>
             <div className='titleCard'>
@@ -19,4 +19,4 @@ const CardUS = (props) => {
         </div>
     )
 }
-export default CardUS;
+export default CardLecture;

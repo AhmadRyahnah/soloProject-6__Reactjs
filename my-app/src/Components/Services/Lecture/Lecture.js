@@ -1,10 +1,10 @@
 import React from 'react'
 import CardInfo from './CardInfo';
-import CardUS from './CardUS';
-import './Unknown Cash.css'
+import CardUS from './CardLecture';
+import './Lecture.css'
 
 
-const UnknownCash = () => {
+const Lecture = () => {
 
     const Cards = CardInfo.map((Card) => {
         return (
@@ -21,9 +21,9 @@ const UnknownCash = () => {
     });
 
     return (
-        <div className='UnknownCash'>
+        <div className='Lecture'>
             {Cards}
         </div>
     )
 }
-export default UnknownCash;
+export default Lecture;

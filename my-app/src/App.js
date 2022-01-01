@@ -7,7 +7,8 @@ import NavBar from "./Components/navbar/NavBar";
 import Home from "./Page/Home";
 import Services from "./Page/Services";
 import SignInUp from './Page/Sign-In-Up'
-import UnknownCash from '../src/Components/Services/Unknown Cash/Unknown Cash'
+import Lecture from '../src/Components/Services/Lecture/Lecture'
+import Courses from "./Components/Services/Courses/Courses";
 
 
 
@@ -24,7 +25,8 @@ const App = () => {
         <Route path='SignInUp' element={<SignInUp />} />
         <Route path='Checkout' element={<Checkout />} />
         <Route path='Services' element={<Services />} />
-        <Route path='UnknownCash' element={<  UnknownCash />} />
+        <Route path='Lecture' element={<  Lecture />} />
+        <Route path='Courses' element={<Courses/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
