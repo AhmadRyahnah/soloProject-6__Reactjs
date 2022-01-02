@@ -7,14 +7,15 @@ import './Lecture.css'
 const Lecture = () => {
 
     const Cards = CardInfo.map((Card) => {
+        console.log(Cards);
         return (
 
             <CardUS
                 key={Card.id}
-                num={Card.num}
-                imgS={Card.imgS}
-                imgL={Card.imgL}
+                desc={Card.desc}
+                img={Card.img}
                 alt={Card.alt}
+                title={Card.title}
                 price={Card.price}
             />
         )

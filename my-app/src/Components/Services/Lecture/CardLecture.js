@@ -1,20 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CardLecture.css'
 const CardLecture = (props) => {
+
+
+
     return (
         <div className='cardContainer'>
-            <div className='titleCard'>
-                <p className='num'>
-                    <img src={props.imgS} alt={props.alt} />
-                    {props.num}
-                </p>
-            </div>
-            <div className='imgCard'>
-                <img src={props.imgL} alt={props.alt} />
-            </div>
-            <div className='priceCard'>
-                <p className='price'>{props.price}</p>
-            </div>
+         <img src={props.img} alt={props.alt} />
+            <h2>{props.title}</h2>
+            <h5>{props.desc}</h5>
+            <h4>{props.price} $</h4>
             <button>Add to cart</button>
         </div>
     )
