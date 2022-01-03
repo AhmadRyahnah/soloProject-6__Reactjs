@@ -1,0 +1,29 @@
+.profile-head {
+    padding: 15px 0 0px;
+}
+ .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.profile img {
+    margin-bottom: 15px;
+}
+
+.cover {
+    background: #0d66ec
+    ;
+}
+
+.customH3UserName {
+    display: inline;
+    margin-left: 25px;
+    color: white;
+}
+
+
+@media (max-width:321px) {
+    .customProfileSize {
+        font-size:12px;
+    }
+}

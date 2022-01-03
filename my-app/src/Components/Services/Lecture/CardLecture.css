@@ -10,8 +10,9 @@
 }
 .cardContainer img{
     margin: 1em 0;
-    max-width: 250px;
-    max-height: 140px;
+    /* max-width: 250px; */
+    width: 250px;
+  height: 140px;
 }
 .cardContainer h5{
     width: 80%;

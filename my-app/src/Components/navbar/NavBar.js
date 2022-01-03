@@ -22,6 +22,10 @@ const NavBar = (props) => {
   }
   const [click, setClick] = useState(true);
   const handleClick = () => setClick(!click)
+  // let bookings = localStorage.getItem('timeOfCourse');
+  // console.log(bookings[1].length);
+  // const [totalCart, setTotalCart] = useState(localStorage.getItem('timeOfCourse') ? localStorage.getItem('timeOfCourse') :0);
+  // setTotalCart(bookings.length)
 
 
   return (
@@ -35,7 +39,7 @@ const NavBar = (props) => {
             <li><Link to="/" onClick={handleClick}>Home</Link></li>
             <li><Link to="/Services" onClick={handleClick}>Services</Link></li>
             {isLoggedIn ? <li><Link to="/Profile" onClick={handleClick}>Profile</Link></li> : null}
-            <li><Link to="/about" onClick={handleClick}>About us</Link></li>
+            <li><Link to="/About" onClick={handleClick}>About us</Link></li>
 
           </ul>
         </div>

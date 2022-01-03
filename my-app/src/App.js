@@ -9,7 +9,9 @@ import Services from "./Page/Services";
 import SignInUp from './Page/Sign-In-Up'
 import Lecture from '../src/Components/Services/Lecture/Lecture'
 import Courses from "./Components/Services/Courses/Courses";
-
+import ConfirmBooking from "./Components/Services/Courses/ConfirmBooking";
+import Profile from  './Components/Profile/Profile'
+import About from "./Components/About/About";
 
 
 const App = () => {
@@ -27,6 +29,9 @@ const App = () => {
         <Route path='Services' element={<Services />} />
         <Route path='Lecture' element={<  Lecture />} />
         <Route path='Courses' element={<Courses/>} />
+        <Route path='ConfirmBooking' element={<ConfirmBooking/>} />
+        <Route path='Profile' element={<Profile/>} />
+        <Route path='About' element={<About/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

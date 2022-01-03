@@ -6,8 +6,12 @@ import './Lecture.css'
 
 const Lecture = () => {
 
+
+
+
+
     const Cards = CardInfo.map((Card) => {
-        console.log(Cards);
+
         return (
 
             <CardUS
