@@ -7,5 +7,5 @@ const Checkout = () => {
         <h1>Ahmad Ryahnah</h1>
     )
 }
-export default Checkout
+export default Checkout;
 
