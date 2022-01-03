@@ -1,7 +1,7 @@
 .CheckoutContainer {
   background-color: white;
   display: grid;
-  grid-template-areas: ' one two';
+  grid-template-areas: " one two";
 }
 .checkoutCard .Card {
   width: 90%;
@@ -17,4 +17,27 @@
 }
 .checkoutCard .Card img {
   height: 140px;
+}
+.formAndLecture h1 {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.formAndLecture h1 button{
+  margin-left: 1em;
+  width: 175px;
+  height: 50px;
+  border-radius: 7px;
+  background-color: #36A420;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.1rem;
+}
+.formChecout{
+  position: fixed;
+  right: 100px;
+  bottom: 200px;
 }

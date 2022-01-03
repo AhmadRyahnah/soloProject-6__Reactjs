@@ -3,17 +3,17 @@ import './CardLecture.css'
 import { UserContext } from '../../../App'
 
 
-const CardLecture = (props) => {
+const CardLecture = (props,id) => {
     
     // const [Total,setTotal]=useState(0);
     // console.log(Total); 
     
     
-    const Lecture = props;
+    let i=0;
+    const Lecture =props
     const { myLecture, setmyLecture } = useContext(UserContext)
     
     const handleClick = (e) => {
-        
         
         e.preventDefault();
         // console.log(Lecture);
@@ -38,7 +38,7 @@ const CardLecture = (props) => {
 
         <div className='cardContainer'>
 
-            <img src={props.img} alt={props.alt} />
+            <img src={props.img} alt={props.alt} key={props.id} />
             <h2>{props.title}</h2>
             <h5>{props.desc}</h5>
             <h4>{props.price} $</h4>

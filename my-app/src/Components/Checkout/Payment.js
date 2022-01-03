@@ -21,20 +21,24 @@ const Payment = () => {
             });
 
             localStorage.removeItem('Lecture')
-           setTimeout(()=>{setmyLecture(0)},2000) 
-         
+            setTimeout(() => { setmyLecture(0) }, 2000)
+
         } else {
             swal({
                 title: "Please Login ",
-             
-               
+
+
                 button: "ok ",
             });
             navigate('/SignInUp')
         }
     }
 
-
+    // const handleRemove = (e) => {
+    //     e.preventDefault();
+    //     localStorage.removeItem('Lecture')
+    //     setmyLecture(0)
+    // }
 
 
 
@@ -54,6 +58,7 @@ const Payment = () => {
 
             {Coupon == 'ryahnah' ? <p>Coupon <strong>ryahnah</strong> is applied and discounted <strong>{Total * 0.2}.00 $</strong></p> : <p>Enter the discount Coupon <strong>ryahnah</strong></p>}
             <button className='Payment' onClick={handleSubmit}>Complete Payment</button>
+            {/* <button className='Payment' onClick={handleRemove}>Remove Item</button> */}
         </form>
 
     )

@@ -54,12 +54,12 @@ const Register = () => {
             let userInformation = {
                 email: email, username: username, password: password
             }
-            localStorage.setItem('User', JSON.stringify(userInformation))
-            // let userInfo=[];
-            // const AllUser=localStorage.getItem('User')?JSON.parse(localStorage.getItem('User')):[];
-            // userInfo=AllUser
-            // userInfo.push(userInformation)
-            // localStorage.setItem('User',JSON.stringify(userInfo))
+            // localStorage.setItem('User', JSON.stringify(userInformation))
+            let userInfo=[];
+            const AllUser=localStorage.getItem('User')?JSON.parse(localStorage.getItem('User')):[];
+            userInfo=AllUser
+            userInfo.push(userInformation)
+            localStorage.setItem('User',JSON.stringify(userInfo))
         } else {
             console.log('ahmad');
         }

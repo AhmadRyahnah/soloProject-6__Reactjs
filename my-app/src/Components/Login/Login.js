@@ -22,9 +22,9 @@ const Login = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         for (let i = 0; i <= localStorage.length; i++) {
-            const user = JSON.parse(localStorage.getItem(localStorage.key(i)));
+            const user = JSON.parse(localStorage.getItem('User'));
 
-            if (user.email === email && user.password === password) {
+            if (user[i].email ===email && user[i].password === password) {
                 localStorage.setItem('loggedUser', JSON.stringify(user))
                 // alert('Successful Login');
                 props.handleUseNavigate();

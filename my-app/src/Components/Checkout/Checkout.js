@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Checkout.css'
 import Payment from './Payment';
 
 
 const Checkout = () => {
- 
+
+
+
     // fetch user's data from local
     let Lecturetable = null;
     if (localStorage.getItem('Lecture')) {
@@ -25,6 +28,12 @@ const Checkout = () => {
             </div>
         )
     }
+
+
+
+
+
+
     let Lectures = JSON.parse(localStorage.getItem('Lecture'));
     return (
 
@@ -32,11 +41,12 @@ const Checkout = () => {
             {Lectures ?
                 <div className='CheckoutContainer'>
                     {Lecturetable}
+
                     <div className='formChecout'>
                         <Payment />
                     </div>
 
-                </div> : <h1>Your Cart Is Empty</h1>}
+                </div> : <h1>Your Cart Is Empty <Link to='/Services'> <button>Go Services</button></Link></h1>}
         </div>
     )
 

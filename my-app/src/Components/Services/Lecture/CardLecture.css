@@ -11,11 +11,11 @@
 .cardContainer img{
     margin: 1em 0;
     /* max-width: 250px; */
-    width: 250px;
-  height: 140px;
+    width: 300px;
+  height: 180px;
 }
 .cardContainer h5{
-    width: 80%;
+    width: 85%;
     text-align: center;
     margin: 1em 0;
 }

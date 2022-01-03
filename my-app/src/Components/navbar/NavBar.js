@@ -7,7 +7,7 @@ import { UserContext } from '../../App'
 export default function Navpath() {
   const navigate = useNavigate();
   const handleUseNavigate = () => {
-    localStorage.getItem('User') ? navigate('/Services') : navigate('/SignInUp');
+    localStorage.getItem('loggedUser') ? navigate('/Services') : navigate('/SignInUp');
   };
   return <NavBar handleUseNavigate={handleUseNavigate} />
 }
@@ -17,9 +17,9 @@ const NavBar = (props) => {
 
   const { myLecture, setmyLecture } = useContext(UserContext)
 
-  let isLoggedIn = localStorage.getItem('User');
+  let isLoggedIn = localStorage.getItem('loggedUser');
   const logout = () => {
-    localStorage.removeItem('User')
+    localStorage.removeItem('loggedUser')
     props.handleUseNavigate()
   }
 
