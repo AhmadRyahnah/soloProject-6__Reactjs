@@ -1,0 +1,20 @@
+.CheckoutContainer {
+  background-color: white;
+  display: grid;
+  grid-template-areas: ' one two';
+}
+.checkoutCard .Card {
+  width: 90%;
+  background-color: whitesmoke;
+  margin: 2em auto;
+  box-shadow: black 0 0 10px;
+  display: grid;
+  grid-template-areas: " one two three";
+  height: 150px;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+}
+.checkoutCard .Card img {
+  height: 140px;
+}

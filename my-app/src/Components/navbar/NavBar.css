@@ -1,3 +1,4 @@
+
 .navbarContainer {
   display: grid;
   grid-template-areas: "logo nav-list shoppingIcon login_logout";

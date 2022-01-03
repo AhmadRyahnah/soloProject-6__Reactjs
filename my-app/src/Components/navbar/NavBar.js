@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./NavBar.css";
-
 import { Link, useNavigate } from "react-router-dom";
 import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
-
+import { UserContext } from '../../App'
 
 export default function Navpath() {
   const navigate = useNavigate();
@@ -15,17 +14,18 @@ export default function Navpath() {
 
 
 const NavBar = (props) => {
+
+  const { myLecture, setmyLecture } = useContext(UserContext)
+
   let isLoggedIn = localStorage.getItem('User');
   const logout = () => {
     localStorage.removeItem('User')
     props.handleUseNavigate()
   }
+
   const [click, setClick] = useState(true);
   const handleClick = () => setClick(!click)
-  // let bookings = localStorage.getItem('timeOfCourse');
-  // console.log(bookings[1].length);
-  // const [totalCart, setTotalCart] = useState(localStorage.getItem('timeOfCourse') ? localStorage.getItem('timeOfCourse') :0);
-  // setTotalCart(bookings.length)
+  // const[cart,setcart]=useState(myLecture.length)
 
 
   return (
@@ -47,7 +47,7 @@ const NavBar = (props) => {
           <ul >
             <li>
               <Link to="/Checkout" onClick={handleClick}><ShoppingIcon /></Link>
-              <Link to="/Checkout" onClick={handleClick} className="shoppingIcon"><span>0</span></Link>
+              <Link to="/Checkout" onClick={handleClick} className="shoppingIcon"><span>{myLecture}</span></Link>
             </li>
           </ul>
         </div>

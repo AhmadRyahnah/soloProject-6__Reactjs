@@ -4,8 +4,7 @@ import Calender from '../../Calender/Calender'
 import './CardCourses.css'
 const ConfirmBooking = () => {
 
-    // Calender
-    {/* <img src={Course.img} alt={Course.alt} /> */ }
+
 
 
     let Course = JSON.parse(localStorage.getItem('Courses'))
