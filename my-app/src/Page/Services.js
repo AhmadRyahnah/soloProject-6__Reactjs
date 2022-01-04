@@ -1,30 +1,34 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from "react-router-dom";
-
+import './Services.css'
 
 const Services = () => {
     return (
-        <div className='twoCard'>
 
-            <Link to='/Lecture'>
-                <div className='cardOne'>
-                    <img src='' alt='' />
-                    <h2>US</h2>
-                    <h6>ahmad</h6>
-                    <h4>ahmad</h4>
+        <Fragment >
+            <h1 className='header'>Services</h1>
+            <div className='LectureAndCourses'>
+                <div className='Lecture'>
+                    <Link to='/Lecture'>
+                        <img src='img/Lecture/lecture.jpg' alt='Lecture' />
+                        <h2>Civil Engineering Courses</h2>
+                        <h3>Starting at : 50.00 $</h3>
+                        <button>See Courses</button>
+
+                    </Link>
                 </div>
-            </Link>
-            <Link to='/Courses'>
-                <div className='cardTwo'>
-                    <div className='cardOne'>
-                        <img src='' alt='' />
-                        <h2>US</h2>
-                        <h6>ahmad</h6>
-                        <h4>ahmad</h4>
-                    </div>
+
+                <div className='Courses'>
+                    <Link to='/Courses'>
+                        <img src='img/Lecture/Courses.jpg' alt='Courses' />
+                        <h2>Civil Engineering Software</h2>
+                        <h3>Starting at : 150.00 $</h3>
+                        <button>See Software</button>
+                    </Link>
                 </div>
-            </Link>
-        </div >
+
+            </div >
+        </Fragment>
     )
 }
 

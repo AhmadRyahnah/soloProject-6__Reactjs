@@ -20,6 +20,8 @@ const NavBar = (props) => {
   let isLoggedIn = localStorage.getItem('loggedUser');
   const logout = () => {
     localStorage.removeItem('loggedUser')
+    localStorage.removeItem('Lecture')
+    localStorage.removeItem('timeOfCourse')
     props.handleUseNavigate()
   }
 
@@ -29,7 +31,7 @@ const NavBar = (props) => {
 
 
   return (
-    <nav >
+   
       <div className="navbarContainer">
         <div className="logo" onClick={handleClick}>
           <img src='./img/logo.png' alt="logo" />
@@ -68,7 +70,7 @@ const NavBar = (props) => {
 
 
       </div>
-    </nav>
+   
   );
 }
 

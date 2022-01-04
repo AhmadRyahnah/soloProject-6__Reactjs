@@ -1,9 +1,12 @@
 
 .navbarContainer {
+  background-color: white;
   display: grid;
   grid-template-areas: "logo nav-list shoppingIcon login_logout";
   height: 70px;
-  position: relative;
+  position: sticky;
+  top: 0;
+
 }
 .nav-icon {
   position: absolute;

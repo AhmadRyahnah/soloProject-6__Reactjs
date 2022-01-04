@@ -4,6 +4,7 @@ const Home=()=>{
     return(
         <div className="homeContainer">
             <Hero/>
+       
         </div>
     )
 }

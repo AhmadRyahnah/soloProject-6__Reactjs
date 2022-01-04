@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import CardCourses from './CardCourses'
 import CoursesItem from './CoursesItem'
 import './Courses.css'
+import Slider from '../../Slider/SliderImg'
 
 const Courses = () => {
 
@@ -19,9 +20,12 @@ const Courses = () => {
         )
     })
     return (
+        <Fragment>
+<Slider/>
         <div className='Courses'>
             {CardItems}
         </div>
+        </Fragment>
     )
 }
 

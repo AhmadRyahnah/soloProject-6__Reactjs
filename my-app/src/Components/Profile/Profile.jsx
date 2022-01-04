@@ -1,47 +1,39 @@
-import React from 'react';
-import Calender from '../Calender/Calender';
+import React, { Fragment } from 'react';
+
 import './Profile.css';
-
-
-
 
 const Profile = () => {
 
     // fetch user's data from local
     const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
     console.log(loggedUser);
-    // const timeBooking = JSON.parse(localStorage.getItem('timeOfCourse'));
-    // console.log(timeBooking[0].startDate);
+
     let bookingstable = null;
     if (localStorage.getItem('timeOfCourse')) {
         let bookings = JSON.parse(localStorage.getItem('timeOfCourse'));
         bookingstable = (
             <div className='customProfile'>
-                {bookings.map((booking, id) => {
-                    return (
-                        <div className="row">
-                            <table className="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Course name</th>
-                                        <th scope="col">Start Date</th>
-                                        <th scope="col">End Date</th>
-                                        <th scope="col">Time</th>
+                <div className="detailsTable">
 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        {localStorage.setItem('total',JSON.stringify(bookings.length))}
-                                        {console.log(bookings.length)}
-                                        <td>{bookings[id].Title}</td>
-                                        <td>{bookings[id].startDate}</td>
-                                        <td>{bookings[id].endDate}</td>
-                                        <td>{bookings[id].time}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+
+                    <h4>Course name</h4>
+                    <h4>Start Date</h4>
+                    <h4>End Date</h4>
+                    <h4>Time</h4>
+                </div>
+                {bookings.map((booking, id) => {
+                    return (<>
+
+
+
+                        <div className="detailsTable">
+                            <h5>{bookings[id].Title}</h5>
+                            <h5>{bookings[id].startDate}</h5>
+                            <h5>{bookings[id].endDate}</h5>
+                            <h5>{bookings[id].time}</h5>
+
                         </div>
+                    </>
                     )
 
                 })}
@@ -52,52 +44,26 @@ const Profile = () => {
 
 
     return (
+        <Fragment>
 
-        <div>
-            <div className="row py-5 px-4 customProfileSize">
-                <div className="col-md-5 mx-auto">
-                    {/* Profile widget */}
-                    <div className="bg-white shadow rounded overflow-hidden">
-                        <div className="px-4 pt-0 cover">
-                            <div className="media  profile-head">
-                                <div className="profile mr-3">
-                                    <img src="https://icons-for-free.com/iconfiles/png/512/man+person+profile+user+worker+icon-1320190557331309792.png" alt="person logo" width={130} className="rounded img-thumbnail" /> 
-                                <h3 className='customH3UserName'>
-                                {`Hello ${loggedUser[0].username} !`}
-                                </h3>
-                                </div>
-                                <div className="media-body mb-5 text-white mt-5 "
-                                    style={{ textAlign: 'center' }}>
-                                </div>
-                            </div>
-                        </div>
+            <h1 className='header'>Profile</h1>
+            <div className='profileContainer'>
+                <div className="userContainer">
+                    <div className="detailsUser">
+                        <p> Hello {`${loggedUser[0].username}`}😃😃</p>
+                        <p>Email: {loggedUser[0].email}</p>
 
-                        <div className="px-4">
-                            <h5 className="mb-4">User Profile:</h5>
-                            <div className="p-4 rounded shadow-sm bg-light">
-                                <p className="font-italic mb-0">Name: {`${loggedUser[0].username}`}</p>
-                                <p className="font-italic mb-0">Email: {loggedUser[0].email}</p>
-
-                            </div>
-                        </div>
-                        <div className="py-4 px-4">
-                            <div className="d-flex align-items-center justify-content-between mb-3">
-                                <h5 className="mb-0">Your Bookings:</h5>
-                            </div>
-                            {bookingstable}
-
-                        </div>
                     </div>
                 </div>
+                <div className="BookingsContaiiner">
+                    <div className="Bookings">
+                        <h3>Your Bookings:</h3>
+                    </div>
+                    {bookingstable}
+                </div>
             </div>
-
-
-
-
-        </div>
-
+        </Fragment>
     )
-
 }
 
 export default Profile

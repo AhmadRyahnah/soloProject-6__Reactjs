@@ -1,29 +1,49 @@
-.profile-head {
-    padding: 15px 0 0px;
+.header {
+  text-align: center;
+  margin: 2em auto 0;
 }
- .row {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
+.profileContainer {
+  width: 50%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  margin: 2em auto;
 }
-
-.profile img {
-    margin-bottom: 15px;
+.userContainer {
+  background-color: #166fe5;
+  width: 100%;
+  text-align: center;
+  color: white;
+  border-radius: 7px;
 }
-
-.cover {
-    background: #0d66ec
-    ;
+.detailsUser p {
+  margin: 1.2em 0;
 }
-
-.customH3UserName {
-    display: inline;
-    margin-left: 25px;
-    color: white;
+.BookingsContaiiner {
+  margin: 2em 0;
+  width: 70%;
 }
-
-
-@media (max-width:321px) {
-    .customProfileSize {
-        font-size:12px;
-    }
+.customProfile {
+  margin-bottom: 1.2em;
+}
+.Bookings h3 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+.detailsTable {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.detailsTable h4,
+.detailsTable h5 {
+  display: flex;
+  /* margin-right: 2em; */
+  margin-bottom: 1em;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }

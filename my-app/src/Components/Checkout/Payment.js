@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from "../../App";
 
 const Payment = () => {
-    const { myLecture, setmyLecture } = useContext(UserContext)
+    const {setmyLecture } = useContext(UserContext)
     let navigate = useNavigate()
     const [Coupon, setCoupon] = useState();
     const handleSubmit = (e) => {
 
 
-        if (localStorage.getItem('User')) {
+        if (localStorage.getItem('loggedUser')) {
             e.preventDefault();
             swal({
                 title: "Payment Complete Successfully ",

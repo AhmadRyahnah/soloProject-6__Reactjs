@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./calender.css";
 
 function Calender(props) {
+  let navigate = useNavigate()
   let today = new Date();
   let day = today.getDate();
   let month = today.getMonth() + 1; //January is 0 so need to add 1 to make it 1!
@@ -87,8 +88,12 @@ function Calender(props) {
     setForm({ ...form, [attr]: e.target.value });
   };
 
-  const handelSubmit = (e) => {
+  const handelSubmit = (e) =>{
     e.preventDefault();
+  if(!localStorage.getItem('loggedUser')){
+    navigate('/SignInUp')
+  }else {
+  
 
     // get the saved array from local storage, if no data was saved, create empty array.
     let ourArray = localStorage.getItem("timeOfCourse")
@@ -117,7 +122,7 @@ function Calender(props) {
     console.log(enteredDateFirst);
     console.log(enteredDateEnd);
     console.log(form);
-  };
+  }};
   const stringToDate = (stringDate) => {
     let stringDateValues = ("" + stringDate).split("-");
     let dateValue = new Date(
@@ -127,7 +132,7 @@ function Calender(props) {
     );
     return dateValue;
   };
-
+  
   return (
     <div className="calender-controls">
       <div className="render-calender-form">
