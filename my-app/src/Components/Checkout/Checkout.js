@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Checkout.css'
 import Payment from './Payment';
@@ -15,6 +15,7 @@ const Checkout = () => {
         console.log(Lectures);
         Lecturetable = (
             <div className='checkoutCard'>
+
                 {Lectures.map((Lecture, id) => {
                     return (
                         <div className='Card'>
@@ -36,18 +37,20 @@ const Checkout = () => {
 
     let Lectures = JSON.parse(localStorage.getItem('Lecture'));
     return (
+        <Fragment>
+            <h1 className='header'>Cart Items</h1>
+            <div className='formAndLecture'>
+                {Lectures ?
+                    <div className='CheckoutContainer'>
+                        {Lecturetable}
 
-        <div className='formAndLecture'>
-            {Lectures ?
-                <div className='CheckoutContainer'>
-                    {Lecturetable}
+                        <div className='formChecout'>
+                            <Payment />
+                        </div>
 
-                    <div className='formChecout'>
-                        <Payment />
-                    </div>
-
-                </div> : <h1>Your Cart Is Empty <Link to='/Services'> <button>Go Services</button></Link></h1>}
-        </div>
+                    </div> : <h1>Your Cart Is Empty <Link to='/Services'> <button>Go Services</button></Link></h1>}
+            </div>
+        </Fragment>
     )
 
 }

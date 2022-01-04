@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css'
 import Checkout from "./Components/Checkout/Checkout";
@@ -15,17 +15,7 @@ import About from "./Components/About/About";
 
 export const UserContext = createContext();
 const App = () => {
-
-  // let myLecture = localStorage.getItem('Lecture') ? JSON.parse(localStorage.getItem('Lecture')) : [];
-  // console.log(myLecture.length)
-  // const Total = myLecture.length
-
-  // let Array = localStorage.getItem('Lecture') ? JSON.parse(localStorage.getItem('Lecture')) : [];
-  // console.log(Array);
-  // console.log(Array.length);
   const [myLecture, setmyLecture] = useState(0);
-
-  // console.log(myLecture);
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ myLecture, setmyLecture }} >

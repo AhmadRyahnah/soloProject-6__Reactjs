@@ -6,18 +6,19 @@ function Slider() {
   let imgNum = 0;
   let imgAlt = 0;
   const [img, setImg] = useState({
-    src: "../assest/img/newarrival.jpg",
+    src: 'img/Courses/Revit.jpg',
     alt: "",
   });
   const images = [
     'img/Courses/Revit.jpg',
     'img/Courses/sap.jpg',
     'img/Courses/ETABS.jpg',
+    'img/Courses/sap.jpg',
+    'img/Courses/sap.jpg',
   ];
   const alt = [
     "",
-    "Wedding Dress",
-    "purple Long Prom Dress",
+    
   
   ];
 
@@ -36,10 +37,10 @@ function Slider() {
   };
   return (
     <div className="new-arrival">
-      <h2 className="title-sections">New Arrival</h2>
+      {/* <h2 className="title-sections">New Arrival</h2> */}
       <div className="img-slider">
         <img src={img.src} alt={img.alt} />
-        <h3>{img.alt}</h3>
+        {/* <h3>{img.alt}</h3> */}
       </div>
     </div>
   );

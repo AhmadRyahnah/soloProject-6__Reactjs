@@ -21,6 +21,7 @@ const Courses = () => {
     })
     return (
         <Fragment>
+            <h1 className='header'>Civil Engineering Software</h1>
 <Slider/>
         <div className='Courses'>
             {CardItems}

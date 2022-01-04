@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import CardInfo from './CardInfo';
 import CardUS from './CardLecture';
 import './Lecture.css'
@@ -26,9 +26,13 @@ const Lecture = () => {
     });
 
     return (
+        <Fragment>
+            <h1 className='header'>Civil Engineering Courses</h1>
+
         <div className='Lecture'>
             {Cards}
         </div>
+        </Fragment>
     )
 }
 export default Lecture;
