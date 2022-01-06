@@ -1,3 +1,8 @@
+.ContHeader{
+  min-height: 62vh;
+}
+
+
 .header {
   margin-bottom: 5em;
 }
@@ -33,7 +38,7 @@
   height: 90px;
 }
 .formAndLecture h1 {
-  height: 75vh;
+  height: 56vh;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -9,7 +9,6 @@ const CardCourses = (props) => {
         console.log(props);
         localStorage.setItem('Courses', JSON.stringify(props))
     }
-    
     return (
         <div className='CoursesContainer' onClick={handleClick}>
             <img src={props.img} alt={props.alt} />

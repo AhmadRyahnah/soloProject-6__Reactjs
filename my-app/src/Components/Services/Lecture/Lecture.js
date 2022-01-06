@@ -10,7 +10,7 @@ const Lecture = () => {
 
 
 
-    const Cards = CardInfo.map((Card) => {
+    const Cards = CardInfo.map((Card,id) => {
 
         return (
 
@@ -21,6 +21,7 @@ const Lecture = () => {
                 alt={Card.alt}
                 title={Card.title}
                 price={Card.price}
+                id={Card.id}
             />
         )
     });

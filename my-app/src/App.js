@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState ,useEffect} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css'
 import Checkout from "./Components/Checkout/Checkout";
@@ -16,6 +16,14 @@ import About from "./Components/About/About";
 export const UserContext = createContext();
 const App = () => {
   const [myLecture, setmyLecture] = useState(0);
+
+  useEffect(() => {
+    const myLecture = (localStorage.getItem('Lecture'))
+        ? JSON.parse(localStorage.getItem('Lecture')) : [];
+            setmyLecture(myLecture.length)
+}, [])
+
+
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ myLecture, setmyLecture }} >

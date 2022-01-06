@@ -5,12 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from "../../App";
 
 const Payment = () => {
-    const {setmyLecture } = useContext(UserContext)
+    const { setmyLecture } = useContext(UserContext)
     let navigate = useNavigate()
     const [Coupon, setCoupon] = useState();
     const handleSubmit = (e) => {
-
-
         if (localStorage.getItem('loggedUser')) {
             e.preventDefault();
             swal({
@@ -19,10 +17,8 @@ const Payment = () => {
                 icon: "success",
                 button: "ok ",
             });
-
             localStorage.removeItem('Lecture')
             setTimeout(() => { setmyLecture(0) }, 2000)
-
         } else {
             swal({
                 title: "Please Login ",
@@ -36,7 +32,6 @@ const Payment = () => {
     for (let id = 0; id < Lectures.length; id++) {
         console.log(Lectures[id].price);
         Total = Total + Lectures[id].price
-
     }
     return (
         <form className="checkout">

@@ -6,12 +6,17 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="about">
+      <div className="about contact">
         <h2>Civil Engineering Academy</h2>
         <p className="aboutPara">
-        At Civil Engineering Academy it is our mission to help aspiring Civil Engineers 
-        pass their exams and develop the skills to be successful in their careers and in life.
+          At Civil Engineering Academy it is our mission to help aspiring Civil Engineers
+          pass their exams and develop the skills to be successful in their careers and in life.
         </p>
+      </div>
+      <div className="about ">
+        <h2>Contact US</h2>
+        <p className="contatUsPara">Amman/Jordan</p>
+        <p className="contatUsPara">+96277745108/+962777685139</p>
       </div>
       <div className="about">
         <h2>Follow Us </h2>
@@ -21,12 +26,6 @@ const Footer = () => {
         <Link to="https://twitter.com/?lang=ar"><i className="Icon fab fa-twitter"> </i></Link>
       </div>
 
-      <div className="about">
-        <h2>Contact US</h2>
-        <p className="contatUsPara">Amman/Jordan</p>
-        <p className="contatUsPara">+96277745108/+962777685139</p>
-
-      </div>
     </footer>
   );
 }

@@ -7,9 +7,8 @@ const Hero = () => {
         <div className="heroContainer">
             <div className="heroImage">
                 <div className="btnOne">
-                    <h1> lorem lorem lorem</h1>
-
-                    <Link to="/shop"><button>SHOP NOW</button></Link>
+                    <h1> Helping You On Your Journey To Become A Professional Engineer</h1>
+                    <Link to="/Services"><button className="btn btnH">Services</button></Link>
                 </div>
             </div>
         </div>

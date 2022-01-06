@@ -40,7 +40,6 @@ const Login = (props) => {
 
             <form className="loginForm">
                 <h2>Sign In</h2>
-
                 <input className="email" type='Email' value={email} onChange={(e) => { setEmail(e.target.value) }} required placeholder='Email' />
                 <input className="password" type='password' value={password} onChange={(e) => { setPassword(e.target.value) }} required placeholder='Password' />
                 <p>{errorMsg}</p>

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import './Profile.css';
 
@@ -14,8 +14,6 @@ const Profile = () => {
         bookingstable = (
             <div className='customProfile'>
                 <div className="detailsTable">
-
-
                     <h4>Course name</h4>
                     <h4>Start Date</h4>
                     <h4>End Date</h4>
@@ -23,9 +21,6 @@ const Profile = () => {
                 </div>
                 {bookings.map((booking, id) => {
                     return (<>
-
-
-
                         <div className="detailsTable">
                             <h5>{bookings[id].Title}</h5>
                             <h5>{bookings[id].startDate}</h5>
@@ -44,7 +39,7 @@ const Profile = () => {
 
 
     return (
-        <Fragment>
+        <div className='profileCont'>
 
             <h1 className='header'>Profile</h1>
             <div className='profileContainer'>
@@ -62,7 +57,7 @@ const Profile = () => {
                     {bookingstable}
                 </div>
             </div>
-        </Fragment>
+        </div>
     )
 }
 

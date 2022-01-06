@@ -1,6 +1,6 @@
 const CardInfo = [
     {
-        id: 0,
+        id: '0',
         img: 'img/Lecture/steel.jpg',
         alt: '600',
         title:'Steel Structure',
@@ -10,7 +10,7 @@ const CardInfo = [
 
     },
     {
-        id: 1,
+        id: '1',
         img: 'img/Lecture/RC.jpg',
         alt: '600',
         title:'Reinforced Concrete',
@@ -20,7 +20,7 @@ const CardInfo = [
 
     },
     {
-        id: 2,
+        id: '2',
         img: 'img/Lecture/Foundation.jpg',
         alt: '600',
         title:'Structural Foundation',
@@ -29,7 +29,7 @@ const CardInfo = [
 
     },
     {
-        id: 3,
+        id: '3',
         img: 'img/Lecture/sofm.jpg',
         alt: '600',
         title:'Strength of Material',
@@ -38,7 +38,7 @@ const CardInfo = [
 
     },
     {
-        id: 4,
+        id: '4',
         img: 'img/Lecture/ST.jpg',
         alt: '600',
         title:'Structural Analysis',
@@ -47,7 +47,7 @@ const CardInfo = [
 
     },
     {
-        id: 5,
+        id: '5',
         img: 'img/Lecture/pre.jpg',
         alt: '600',
         title:'Prestressed Concrete',

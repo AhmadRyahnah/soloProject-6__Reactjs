@@ -9,7 +9,6 @@ const Courses = () => {
     const CardItems = CoursesItem.map((CardItem) => {
         return (
             <CardCourses
-
                 key={CardItem.id}
                 img={CardItem.img}
                 title={CardItem.title}
@@ -22,10 +21,10 @@ const Courses = () => {
     return (
         <Fragment>
             <h1 className='header'>Civil Engineering Software</h1>
-<Slider/>
-        <div className='Courses'>
-            {CardItems}
-        </div>
+            <Slider />
+            <div className='Courses'>
+                {CardItems}
+            </div>
         </Fragment>
     )
 }

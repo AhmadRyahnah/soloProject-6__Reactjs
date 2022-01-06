@@ -1,0 +1,28 @@
+/* .Testimonial img{
+    width: 100px;
+    height: 100px;
+
+} */
+.background {
+  background-color: #e8f1f8;
+}
+.TestimonialContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+.TestimonialContainer h1 {
+  /* margin: 3em; */
+  text-align: center;
+  padding: 2em;
+}
+.Testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4em;
+}
+.Testimonial img {
+  width: 19em;
+  height: 19em;
+}

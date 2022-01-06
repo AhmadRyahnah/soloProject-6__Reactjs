@@ -4,9 +4,6 @@ import Calender from '../../Calender/Calender'
 import './CardCourses.css'
 const ConfirmBooking = () => {
 
-
-
-
     let Course = JSON.parse(localStorage.getItem('Courses'))
     return (
         <div className='ConfirmBooking'>
@@ -14,8 +11,7 @@ const ConfirmBooking = () => {
                 <img src={Course.img} alt={Course.alt} />
                 <h2>{Course.title}</h2>
                 <h5>{Course.desc}</h5>
-                <h4>{Course.numUS} $</h4>
-               
+                <h4>{Course.numUS} $</h4> 
             </div>
             <div className='ConfirmCalender'>
                 <Calender />

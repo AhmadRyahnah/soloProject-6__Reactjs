@@ -25,7 +25,7 @@
 .LectureAndCourses .Courses {
   background-color: whitesmoke;
   border-radius: 7px;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px #0000008c;
   display: flex;
   /* flex-direction: column;
   justify-content: center; */
