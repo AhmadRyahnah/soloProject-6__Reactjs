@@ -42,6 +42,7 @@
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  cursor: pointer;
 }
 .btnOne .btn:hover{
   background-position: 100% 0;

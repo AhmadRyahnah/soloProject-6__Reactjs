@@ -4,7 +4,7 @@
     margin: 2rem auto;
     height: 60vh;
     width: 70%;
-    box-shadow: 0 4px 8px 0 rgba(128, 0, 128, 0.301);
+    box-shadow: 0 0 4px black;
     border-radius: 10px;
     padding: 1rem;
   }
@@ -13,15 +13,15 @@
     height: 55vh;
     align-self: center;
   }
-  .new-arrival h3 {
+  /* .new-arrival h3 {
     text-align: center;
     color: rgb(206, 130, 143);
     margin-top: 1rem;
-  }
-  .slider-btn {
+  } */
+  /* .slider-btn {
     background-image: linear-gradient(rgb(206, 130, 143), var(--nav_color));
     color: var(--primary);
-  }
+  } */
   
   @media screen and (max-width: 700px) {
     .img-slider > img {

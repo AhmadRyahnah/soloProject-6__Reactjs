@@ -54,8 +54,10 @@ const Testimonial = () => {
 
                 <div className="Testimonial">
                     <img src={img.src} alt={img.alt} />
-                    <h3>{img.alt} <h1>{img.name}</h1></h3>
-
+                    <div className="paraAndName">
+                        <h3>{img.alt} </h3>
+                        <h1>{img.name}</h1>
+                    </div>
                 </div>
             </div>
         </div>
