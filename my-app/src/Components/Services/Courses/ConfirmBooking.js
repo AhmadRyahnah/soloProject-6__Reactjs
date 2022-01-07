@@ -1,6 +1,7 @@
 import React from 'react'
 import './Confirmbooking.css'
 import Calender from '../../Calender/Calender'
+import BookingForm from '../../Calender/newCalender'
 import './CardCourses.css'
 const ConfirmBooking = () => {
 
@@ -14,7 +15,8 @@ const ConfirmBooking = () => {
                 <h4>{Course.numUS} $</h4> 
             </div>
             <div className='ConfirmCalender'>
-                <Calender />
+                {/* <Calender /> */}
+                <BookingForm/>
             </div>
         </div>
     )
