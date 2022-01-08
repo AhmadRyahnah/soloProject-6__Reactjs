@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import './Calender.css'
+import swal from 'sweetalert';
+import { useNavigate } from 'react-router-dom';
 const BookingForm = (props) => {
+  let navigate = useNavigate()
   const Title = props.Title
   const [date, setdate] = useState()
   const [time, setTime] = useState()
@@ -29,24 +32,38 @@ const BookingForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!localStorage.getItem("User")) {
+      swal({
+        title: "Please Login ",
+        button: "ok ",
+      });
+      navigate('/SignInUp')
+    }else{
+
     let myArray = localStorage.getItem("date")
       ? JSON.parse(localStorage.getItem("date"))
       : [];
 
     let exist = false;
-    myArray.forEach((element) => {
+    myArray.forEach((element, id) => {
       if (element.date === date && element.time === time) {
         exist = true;
-        alert(`Please Choose Another Time`)
+        swal({
+          title: `Please Choose Another Time`,
+        });
       }
     })
     if (!exist) {
       setId(id + 1)
       setTime(time)
+      swal({
+        title: ` Successfully Booked ${Title} on ${date} at ${time} `,
+        text: 'Check Your Profile'
+      });
       myArray.push({ date, time, id, Title, today })
     }
     localStorage.setItem('date', JSON.stringify(myArray))
-  }
+  }}
   return (
     <div className='ContainerCalender'>
       <form onSubmit={handleSubmit}>

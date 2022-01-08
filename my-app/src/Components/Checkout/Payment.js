@@ -35,9 +35,9 @@ const Payment = () => {
     }
     return (
         <form className="checkout">
-            {Coupon == 'ryahnah' ? <h2>Total {Total * 0.8}.00 $</h2> : <h2>Total {Total}.00 $</h2>}
+            {Coupon === 'ryahnah' ? <h2>Total {Total * 0.8}.00 $</h2> : <h2>Total {Total}.00 $</h2>}
             <input className="text" type='text' value={Coupon} onChange={(e) => { setCoupon(e.target.value) }} placeholder='Enter Coupon' />
-            {Coupon == 'ryahnah' ? <p>Coupon <strong>ryahnah</strong> is applied and discounted <strong>{Total * 0.2}.00 $</strong></p> : <p>Enter the discount Coupon <strong>ryahnah</strong></p>}
+            {Coupon === 'ryahnah' ? <p>Coupon <strong>ryahnah</strong> is applied and discounted <strong>{Total * 0.2}.00 $</strong></p> : <p>Enter the discount Coupon <strong>ryahnah</strong></p>}
             <button className='Payment' onClick={handleSubmit}>Complete Payment</button>
         </form>
 

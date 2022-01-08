@@ -43,7 +43,7 @@
        
       }
       .imgWelcome {
-        margin: 10em 0;
+        margin: 1em 0;
       }
   }
   @media screen and (max-width: 550px) {
@@ -55,9 +55,14 @@
         grid-gap: 0;
       }
       .imgWelcome {
-        margin-bottom: 2em;
+        margin-bottom: 1em;
       }
       .paraWelcom {
-        margin:  2em 0 0;
+        margin:  1em 0 0;
+      }
+      .paraWelcom p {
+        
+        text-align: center;
+       
       }
   }

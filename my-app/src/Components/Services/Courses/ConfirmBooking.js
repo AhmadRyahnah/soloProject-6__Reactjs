@@ -1,6 +1,6 @@
 import React from 'react'
 import './Confirmbooking.css'
-import Calender from '../../Calender/Calender'
+
 import BookingForm from '../../Calender/Calender'
 import './CardCourses.css'
 const ConfirmBooking = () => {

@@ -1,7 +1,7 @@
 .ConfirmBooking {
   width: 100%;
   display: grid;
-  grid-template-areas: " ConfirmCard   Calender Calender Calender";
+  grid-template-areas: " ConfirmCard  Calender Calender";
 }
 .ConfirmCard {
   width: 70%;
@@ -38,8 +38,8 @@
   .ConfirmCard {
     width: 90%;
   }
-  .ConfirmCalender {
+  .ConfirmBooking .ConfirmCalender {
     width: 90%;
-    margin: auto;
+    margin:0 auto 2em;
   }
 }
