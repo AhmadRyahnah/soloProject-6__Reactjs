@@ -21,7 +21,7 @@ const NavBar = (props) => {
   const logout = () => {
     localStorage.removeItem('loggedUser')
     localStorage.removeItem('Lecture')
-    localStorage.removeItem('timeOfCourse')
+    localStorage.removeItem('date')
     props.handleUseNavigate()
   }
 

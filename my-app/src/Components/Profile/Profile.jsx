@@ -13,25 +13,26 @@ const Profile = () => {
         let bookings = JSON.parse(localStorage.getItem('date'));
         bookingstable = (
             <div className='customProfile'>
-                <div className="detailsTable">
-                    <h4>Course name</h4>
-                    <h4>Start Date</h4>
-                    
-                    <h4>Time</h4>
-                </div>
-                {bookings.map((booking, id) => {
-                    return (<>
-                        <div className="detailsTable">
-                            <h5>{bookings[id].Title}</h5>
-                            <h5>{bookings[id].date}</h5>
-                          
-                            <h5>{bookings[id].time}</h5>
+                <table >
+                        <tr>
+                            <th><h3>Course name</h3></th>
+                            <th><h3>Start Date</h3></th>
 
-                        </div>
-                    </>
-                    )
+                            <th><h3>Time</h3></th>
+                        </tr>
+                    {bookings.map((booking, id) => {
+                        return (<>
+                                <tr>
 
-                })}
+                                    <td><h5>{bookings[id].Title}</h5></td>
+                                    <td> <h5>{bookings[id].date}</h5></td>
+                                    <td> <h5>{bookings[id].time}</h5></td>
+                                </tr>
+                        </>
+                        )
+
+                    })}
+                </table>
             </div>
         )
     }

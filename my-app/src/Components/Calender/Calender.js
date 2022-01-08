@@ -13,7 +13,7 @@ const BookingForm = (props) => {
   ];
   let today = new Date();
   let day = today.getDate();
-  let month = today.getMonth() + 1; //January is 0!
+  let month = today.getMonth() + 1;
   let year = today.getFullYear();
   if (day < 10) {
     day = '0' + day
@@ -34,7 +34,7 @@ const BookingForm = (props) => {
       : [];
 
     let exist = false;
-    myArray.forEach((element, id) => {
+    myArray.forEach((element) => {
       if (element.date === date && element.time === time) {
         exist = true;
         alert(`Please Choose Another Time`)
