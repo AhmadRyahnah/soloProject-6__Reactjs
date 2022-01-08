@@ -1,6 +1,6 @@
 const CoursesItem = [
     {
-       id:'one',
+       id:'0',
        img:'img/Courses/ETABS.jpg',
        title:'ETABS Course',
        desc:'ETABS is an engineering software product that caters to multi-story building analysis and design.',
@@ -8,7 +8,7 @@ const CoursesItem = [
        alt:'ETABS Course'
     },
     {
-        id:'two',
+        id:'1',
         img:'img/Courses/Revit.jpg',
         title:'REVIT Course',
         desc:'Revit allows you to produce consistent, coordinated, and complete model-based building designs and documentation',
@@ -16,7 +16,7 @@ const CoursesItem = [
         alt:'REVIT Course'
      },
      {
-        id:'three',
+        id:'2',
         img:'img/Courses/sap.jpg',
         title:'SAP Courses',
         desc:'SAP used for structural analysis. It is a general purpose software, we can use it for analyzing most of the structures',

@@ -9,12 +9,14 @@ const Courses = () => {
     const CardItems = CoursesItem.map((CardItem) => {
         return (
             <CardCourses
+                Card={CardItem}
                 key={CardItem.id}
                 img={CardItem.img}
                 title={CardItem.title}
                 desc={CardItem.desc}
                 numUS={CardItem.numUS}
                 alt={CardItem.alt}
+                id={CardItem.id}
             />
         )
     })

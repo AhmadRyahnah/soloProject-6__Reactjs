@@ -1,7 +1,7 @@
 import React from 'react'
 import './Confirmbooking.css'
 import Calender from '../../Calender/Calender'
-import BookingForm from '../../Calender/newCalender'
+import BookingForm from '../../Calender/Calender'
 import './CardCourses.css'
 const ConfirmBooking = () => {
 
@@ -16,7 +16,7 @@ const ConfirmBooking = () => {
             </div>
             <div className='ConfirmCalender'>
                 {/* <Calender /> */}
-                <BookingForm/>
+                <BookingForm  Title={Course.title}/>
             </div>
         </div>
     )
