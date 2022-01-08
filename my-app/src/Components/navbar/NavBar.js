@@ -15,7 +15,7 @@ export default function Navpath() {
 
 const NavBar = (props) => {
 
-  const { myLecture, setmyLecture } = useContext(UserContext)
+  const { myLecture } = useContext(UserContext)
 
   let isLoggedIn = localStorage.getItem('loggedUser');
   const logout = () => {
