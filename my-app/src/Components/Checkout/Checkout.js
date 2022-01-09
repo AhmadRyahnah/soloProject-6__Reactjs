@@ -1,44 +1,52 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react/cjs/react.development';
 import './Checkout.css'
 import Payment from './Payment';
+import { UserContext } from '../../App';
+const Checkout = (props) => {
+    const { setmyLecture } = useContext(UserContext)
 
-const Checkout = () => {
-    // fetch user's data from local
-    let Lecturetable = null;
-    if (localStorage.getItem('Lecture')) {
-        let Lectures = JSON.parse(localStorage.getItem('Lecture'));
-    
-        console.log(Lectures);
-        Lecturetable = (
-            <div className='checkoutCard'>
-                {Lectures.map((Lecture, id) => {
-                    return (
-                        <div className='Card'>
-                            
-                            <img src={Lectures[id].img} alt={Lectures[id].alt} />
-                            <h3>{Lectures[id].title}</h3>
-                            <h2>{Lectures[id].price}.00 $</h2>
-                        </div>
-                    )
-                })}
-            </div>
-        )
+    const removeItem = () => {
+
+        const myArray = localStorage.getItem('Lecture') ?
+            JSON.parse(localStorage.getItem('Lecture')) : []
+        for (let i = 0; i < myArray.length; i++) {
+            if (props.id === myArray[i].id) {
+                myArray.splice(i, 1)
+                setmyLecture(myArray.length)
+            }
+        }
+        localStorage.setItem('Lecture', JSON.stringify(myArray))
+
+
+        if (myArray.length === 0) {
+            localStorage.removeItem('Lecture')
+        }
     }
-    let Lectures = JSON.parse(localStorage.getItem('Lecture'));
+
     return (
-        <div className='ContHeader'>
-            <h1 className='header'>Cart Items</h1>
-            <div className='formAndLecture'>
-                {Lectures ?
-                    <div className='CheckoutContainer'>
-                        {Lecturetable}
-                        <div className='formChecout'>
-                            <Payment />
-                        </div>
-                    </div> : <h1>Your Cart Is Empty <Link to='/Services'> <button>Go Services</button></Link></h1>}
+
+        <div className='formAndLecture'>
+            <div className='CheckoutContainer'>
+                <div className='checkoutCard'>
+
+                    <div className='Card'>
+
+                        <img src={props.img} alt={props.alt} />
+                        <h3>{props.title}</h3>
+                        <h2>{props.price}.00 $</h2>
+                        <button onClick={removeItem} >Delete</button>
+                    </div>
+
+                </div>
+
+                <div className='formChecout'>
+                    <Payment />
+                </div>
             </div>
         </div>
+
     )
 }
 export default Checkout;

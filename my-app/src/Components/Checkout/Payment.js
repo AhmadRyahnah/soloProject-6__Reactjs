@@ -30,7 +30,7 @@ const Payment = () => {
     let Total = 0;
     let Lectures = (localStorage.getItem('Lecture')) ? JSON.parse(localStorage.getItem('Lecture')) : [];
     for (let id = 0; id < Lectures.length; id++) {
-        console.log(Lectures[id].price);
+        // console.log(Lectures[id].price);
         Total = Total + Lectures[id].price
     }
     return (

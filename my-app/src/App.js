@@ -12,6 +12,7 @@ import Courses from "./Components/Services/Courses/Courses";
 import ConfirmBooking from "./Components/Services/Courses/ConfirmBooking";
 import Profile from './Components/Profile/Profile'
 import About from "./Components/About/About";
+import ItemCart from "./Components/Checkout/ItemCart";
 
 export const UserContext = createContext();
 const App = () => {
@@ -31,7 +32,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='SignInUp' element={<SignInUp />} />
-          <Route path='Checkout' element={<Checkout />} />
+          <Route path='Checkout' element={<ItemCart />} />
           <Route path='Services' element={<Services />} />
           <Route path='Lecture' element={<  Lecture />} />
           <Route path='Courses' element={<Courses />} />
