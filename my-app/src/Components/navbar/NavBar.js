@@ -57,7 +57,7 @@ const NavBar = (props) => {
           <ul >
             <li>
 
-              {isLoggedIn ? <button onClick={logout}><Link to="/SignInUp" onClick={handleClick}>Log out</Link></button>
+              {isLoggedIn ? <button style={{backgroundColor:"#FB6767" }} onClick={logout}><Link to="/SignInUp" onClick={handleClick}>Log out</Link></button>
                 :
                 <button><Link to="/SignInUp" onClick={handleClick}>Log In</Link></button>}
 

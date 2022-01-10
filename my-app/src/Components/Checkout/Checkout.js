@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import { useContext } from 'react/cjs/react.development';
 import './Checkout.css'
-import Payment from './Payment';
+
 import { UserContext } from '../../App';
 const Checkout = (props) => {
     const { setmyLecture } = useContext(UserContext)
@@ -11,14 +11,17 @@ const Checkout = (props) => {
 
         const myArray = localStorage.getItem('Lecture') ?
             JSON.parse(localStorage.getItem('Lecture')) : []
+            let deleteArray=localStorage.getItem('fromDelete') ?
+            JSON.parse(localStorage.getItem('fromDelete')) : []
         for (let i = 0; i < myArray.length; i++) {
             if (props.id === myArray[i].id) {
                 myArray.splice(i, 1)
                 setmyLecture(myArray.length)
+                deleteArray.push(props)
+                localStorage.setItem('fromDelete',JSON.stringify(deleteArray))
             }
         }
         localStorage.setItem('Lecture', JSON.stringify(myArray))
-
 
         if (myArray.length === 0) {
             localStorage.removeItem('Lecture')
@@ -27,25 +30,23 @@ const Checkout = (props) => {
 
     return (
 
-        <div className='formAndLecture'>
-            <div className='CheckoutContainer'>
-                <div className='checkoutCard'>
 
-                    <div className='Card'>
 
-                        <img src={props.img} alt={props.alt} />
-                        <h3>{props.title}</h3>
-                        <h2>{props.price}.00 $</h2>
-                        <button onClick={removeItem} >Delete</button>
-                    </div>
+       
 
-                </div>
+            <div className='Card'>
 
-                <div className='formChecout'>
-                    <Payment />
-                </div>
+                <img src={props.img} alt={props.alt} />
+                <h3>{props.title}</h3>
+                <h2>{props.price}.00 $</h2>
+                <button onClick={removeItem} >Delete</button>
             </div>
-        </div>
+
+      
+
+
+
+
 
     )
 }
