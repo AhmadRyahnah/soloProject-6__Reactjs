@@ -1,7 +1,9 @@
 .ContHeader{
   min-height: 62vh;
 }
-
+.formAndLecture{
+  min-height: 70vh;
+}
 
 .header {
   margin-bottom: 5em;

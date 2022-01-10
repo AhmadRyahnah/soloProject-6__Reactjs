@@ -42,7 +42,7 @@ const Payment = () => {
 
 
     const UndoDelete = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         let Lectures = (localStorage.getItem('Lecture')) ? JSON.parse(localStorage.getItem('Lecture')) : [];
         let deleteArray = (localStorage.getItem('fromDelete')) ? JSON.parse(localStorage.getItem('fromDelete')) : [];
         console.log(...deleteArray);
@@ -66,7 +66,10 @@ const Payment = () => {
             {Coupon === 'ryahnah' ? <p>Coupon <strong>ryahnah</strong> is applied and discounted <strong>{Total * 0.2}.00 $</strong></p> : <p>Enter the discount Coupon <strong>ryahnah</strong></p>}
             <button className='Payment' onClick={handleSubmit}>Complete Payment</button>
             <button className="remove" onClick={removeAll}>Delete All</button>
-            <button className='Payment' onClick={UndoDelete}>Undo Delete</button>
+
+         
+                <button  className='Payment' onClick={UndoDelete}>Undo Delete</button>
+               
         </form>
 
     )
