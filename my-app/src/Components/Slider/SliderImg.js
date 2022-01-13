@@ -10,7 +10,7 @@ function Slider() {
     'img/Courses/Revit.jpg',
     'img/Courses/sap.jpg',
     'img/Courses/ETABS.jpg',
-    'img/Courses/Revit.jpg',
+     'img/Courses/Revit.jpg',
     'img/Courses/sap.jpg',
     'img/Courses/ETABS.jpg',
 
