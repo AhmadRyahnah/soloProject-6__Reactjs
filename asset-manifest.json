@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/soloProject-6__Reactjs/my-app/static/css/main.96c2dd06.css",
+    "main.js": "/soloProject-6__Reactjs/my-app/static/js/main.9de85323.js",
+    "static/media/hero.jpeg": "/soloProject-6__Reactjs/my-app/static/media/hero.6ca94b4e50bad3fac4d1.jpeg",
+    "static/media/shopping-bag.svg": "/soloProject-6__Reactjs/my-app/static/media/shopping-bag.de5a56a661a7400aeab6c61805840ee5.svg",
+    "index.html": "/soloProject-6__Reactjs/my-app/index.html",
+    "main.96c2dd06.css.map": "/soloProject-6__Reactjs/my-app/static/css/main.96c2dd06.css.map",
+    "main.9de85323.js.map": "/soloProject-6__Reactjs/my-app/static/js/main.9de85323.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96c2dd06.css",
+    "static/js/main.9de85323.js"
+  ]
+}
