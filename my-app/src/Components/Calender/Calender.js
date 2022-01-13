@@ -25,8 +25,8 @@ const BookingForm = (props) => {
     month = '0' + month
   }
   today = day + '-' + month + '-' + year;
-  // let startbook = year + '-' + month + '-' + ((new Date().getDate()) + 7);
-  let startbook = year + '-' + month + '-' + day;
+  let startbook = year + '-' + month + '-' + ((new Date().getDate()) + 7);
+  // let startbook = year + '-' + month + '-' + day;
   console.log(startbook);
 
   const handleSubmit = (e) => {
