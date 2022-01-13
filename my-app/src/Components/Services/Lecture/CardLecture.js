@@ -27,6 +27,7 @@ const CardLecture = (props) => {
 
     const handleClick = (e) => {
         e.preventDefault();
+        localStorage.removeItem('fromDelete')
         let myLecture = [];
         const myAllLecture = (localStorage.getItem('Lecture'))
             ? JSON.parse(localStorage.getItem('Lecture')) : [];

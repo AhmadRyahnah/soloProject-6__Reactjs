@@ -32,7 +32,7 @@ const BookingForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!localStorage.getItem("User")) {
+    if (!localStorage.getItem("loggedUser")) {
       swal({
         title: "Please Login ",
         button: "ok ",
@@ -69,9 +69,9 @@ const BookingForm = (props) => {
       <form onSubmit={handleSubmit}>
         <label className='today'>Today {today}</label>
         <label className='booking'>Start Booking</label>
-        <input className='inputDate' type='date' min={startbook} value={date} onChange={(e) => { setdate(e.target.value) }} />
+        <input className='inputDate' type='date' required min={startbook} value={date} onChange={(e) => { setdate(e.target.value) }} />
         <label className='booking'> Select Time</label>
-        <select className='inputDate' onChange={(e) => { setTime(e.target.value) }}>
+        <select className='inputDate' required onChange={(e) => { setTime(e.target.value) }}>
           {TimeSlot.map((item) => { return <option value={item.value}>{item.text}</option> })}
         </select>
         <input className='btnCalender' type="submit" />

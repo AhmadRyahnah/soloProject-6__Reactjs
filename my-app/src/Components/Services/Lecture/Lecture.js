@@ -7,10 +7,7 @@ import './Lecture.css'
 const Lecture = () => {
 
 
-
-
-
-    const Cards = CardInfo.map((Card,id) => {
+    const Cards = CardInfo.map((Card) => {
 
         return (
 
@@ -29,10 +26,9 @@ const Lecture = () => {
     return (
         <Fragment>
             <h1 className='header'>Civil Engineering Courses</h1>
-
-        <div className='Lecture'>
-            {Cards}
-        </div>
+            <div className='Lecture'>
+                {Cards}
+            </div>
         </Fragment>
     )
 }

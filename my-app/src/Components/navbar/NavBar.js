@@ -15,13 +15,17 @@ export default function Navpath() {
 
 const NavBar = (props) => {
 
-  const { myLecture } = useContext(UserContext)
+  const { myLecture ,setmyLecture } = useContext(UserContext)
 
   let isLoggedIn = localStorage.getItem('loggedUser');
   const logout = () => {
     localStorage.removeItem('loggedUser')
     localStorage.removeItem('Lecture')
     localStorage.removeItem('date')
+    localStorage.removeItem('fromDelete')
+    localStorage.removeItem('Courses')
+    
+    setmyLecture(0)
     props.handleUseNavigate()
   }
 

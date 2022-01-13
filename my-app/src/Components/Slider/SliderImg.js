@@ -1,48 +1,49 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./SliderImg.css";
 
 function Slider() {
-  let imgNum = 0;
-  let imgAlt = 0;
-  const [img, setImg] = useState({
-    src: 'img/Courses/Revit.jpg',
-    alt: "",
-  });
+
+  const [img, setImg] = useState('img/Courses/Revit.jpg');
+  const [counter, setCounter] = useState(0)
   const images = [
     'img/Courses/Revit.jpg',
     'img/Courses/sap.jpg',
     'img/Courses/ETABS.jpg',
+    'img/Courses/Revit.jpg',
     'img/Courses/sap.jpg',
-    'img/Courses/sap.jpg',
-  ];
-  const alt = [
-    "",
-    
-  
-  ];
+    'img/Courses/ETABS.jpg',
 
-  useEffect(() => {
-    setInterval(next, 5000);
-  }, [imgNum]);
+  ];
 
   const next = () => {
-    imgNum++;
-    imgAlt++;
-    if (imgNum > images.length - 1 && imgAlt > alt.length - 1) {
-      imgNum = 0;
-      imgAlt = 0;
+    setCounter(counter + 1);
+    setImg(images[counter])
+    if (counter === images.length - 1) {
+      setCounter(0)
     }
-    setImg({ src: images[imgNum], alt: alt[imgAlt] });
+  };
+  const back = () => {
+
+    setCounter(counter - 1);
+    setImg(images[counter])
+
+    if (counter === 0) {
+
+      setCounter(images.length - 1)
+    }
+
+
   };
   return (
-    <div className="new-arrival">
-      {/* <h2 className="title-sections">New Arrival</h2> */}
-      <div className="img-slider">
-        <img src={img.src} alt={img.alt} />
-        {/* <h3>{img.alt}</h3> */}
-      </div>
+
+    <div className="img-slider">
+      <i class="fas fa-arrow-left" onClick={back} ></i>
+      <img src={img} alt="..." />
+
+      <i class="fas fa-arrow-right" onClick={next}></i>
     </div>
+
   );
 }
 

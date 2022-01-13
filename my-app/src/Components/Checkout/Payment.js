@@ -39,8 +39,6 @@ const Payment = () => {
         localStorage.removeItem('Lecture')
         setmyLecture(0)
     }
-
-
     const UndoDelete = (e) => {
         e.preventDefault()
         let Lectures = (localStorage.getItem('Lecture')) ? JSON.parse(localStorage.getItem('Lecture')) : [];
@@ -52,8 +50,7 @@ const Payment = () => {
             localStorage.setItem('Lecture', JSON.stringify(Lectures));
             setmyLecture(Lectures.length)
         }
-
-
+        
         if (localStorage.getItem('Lecture')) {
             localStorage.removeItem('fromDelete')
         }

@@ -25,8 +25,6 @@ const ItemCart = () => {
 
     return (
         <Fragment>
-
-
             <h1 className='header'>Cart Items</h1>
             <div className='formAndLecture'>
                 {localStorage.getItem('Lecture') ?

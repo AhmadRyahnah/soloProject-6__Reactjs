@@ -29,11 +29,6 @@ const Checkout = (props) => {
     }
 
     return (
-
-
-
-       
-
             <div className='Card'>
 
                 <img src={props.img} alt={props.alt} />
@@ -41,13 +36,6 @@ const Checkout = (props) => {
                 <h2>{props.price}.00 $</h2>
                 <button onClick={removeItem} >Delete</button>
             </div>
-
-      
-
-
-
-
-
     )
 }
 export default Checkout;
